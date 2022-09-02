@@ -1,15 +1,13 @@
 import React from "react";
 import { Text, View, Image, StyleSheet, FlatList } from "react-native";
-import { useNavigation } from "@react-navigation/native";
-
 import { TipoProdutor } from "../../mocks/produtores";
+
 import Topo from '../../components/Topo';
 import Cesta from "./components/Cesta";
 
 
 export default ({ route }: { route: any }) => {
     const produtor: TipoProdutor = route.params?.produtor
-    const navigation: any = useNavigation()
 
     const Header = () => {
         return (<>

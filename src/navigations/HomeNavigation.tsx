@@ -6,15 +6,14 @@ import Home from "../screens/Home";
 import Produtor from "../screens/Produtor";
 import Cesta from "../screens/Cesta";
 
-
 export default () => {
     const Stack = createNativeStackNavigator();
-    return(
+    return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown:false} }>
+            <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
                 <Stack.Screen name="Home" component={Home} />
-                <Stack.Screen name="Produtor" component={Produtor}/>
-                <Stack.Screen name="Cesta" component={Cesta}/>
+                <Stack.Screen name="Produtor" component={Produtor} />
+                <Stack.Screen name="Cesta" component={Cesta} />
             </Stack.Navigator>
         </NavigationContainer>
     )

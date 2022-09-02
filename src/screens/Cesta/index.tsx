@@ -9,19 +9,19 @@ import Item from "./components/Item";
 export default ({ route }: { route: any }) => {
     const { itens, produtor, cesta } = route.params
 
-    const navigation = useNavigation()
+    const navigation: any = useNavigation()
 
     const Header = () => {
         return (<>
             <Detalhes produtor={produtor} cesta={cesta} />
-            <Botao texto="Comprar" onPress={() => { navigation.navigate('Home', {comprou:cesta}) }} />
+            <Botao texto="Comprar" onPress={() => { navigation.navigate('Home', { compra: { nome: cesta.nome } }) }} />
             <Text style={styles.frase}>Itens da Cesta</Text>
         </>)
     }
 
     return (<>
         <FlatList data={itens}
-            ListHeaderComponent={<Header/>}
+            ListHeaderComponent={<Header />}
             keyExtractor={item => item.nome}
             renderItem={({ item }) => <Item item={item} />}
         />

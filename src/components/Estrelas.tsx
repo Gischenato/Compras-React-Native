@@ -3,18 +3,18 @@ import { StyleSheet, View } from "react-native";
 
 import Estrela from "./Estrela";
 
-export default ({quantidade:quantidadeAntiga}: {quantidade:number}) => {
+export default ({ quantidade: quantidadeAntiga }: { quantidade: number }) => {
 
     const [quantidade, setQuantidade] = useState(quantidadeAntiga)
 
     const RenderEstrelas = () => {
         let estrelas = []
         for (let i = 0; i < 5; i++)
-            estrelas.push(<Estrela verde={i < quantidade} onPress={() => setQuantidade(i+1)} key={i}/>)
+            estrelas.push(<Estrela verde={i < quantidade} onPress={() => setQuantidade(i + 1)} key={i} />)
         return estrelas
     }
 
-    return(
+    return (
         <View style={styles.estrelas}>
             {RenderEstrelas()}
         </View>
@@ -22,7 +22,7 @@ export default ({quantidade:quantidadeAntiga}: {quantidade:number}) => {
 }
 
 const styles = StyleSheet.create({
-    estrelas:{
+    estrelas: {
         flexDirection: 'row'
     }
 })

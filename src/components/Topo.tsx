@@ -1,5 +1,5 @@
 import React from "react";
-import { Dimensions, Image, StyleSheet, Text, View, TouchableOpacity} from "react-native";
+import { Dimensions, Image, StyleSheet, Text, View, TouchableOpacity } from "react-native";
 
 import { useNavigation } from "@react-navigation/native";
 
@@ -11,24 +11,24 @@ const topo = require('../assets/produtores/topo.png')
 
 const largura = Dimensions.get('screen').width
 
-export default ({titulo, imagem=topo}: {titulo:string, imagem?:any}) => {
+export default ({ titulo, imagem = topo }: { titulo: string, imagem?: any }) => {
     const navigation = useNavigation();
 
-    return(
+    return (
         <View>
-            <Image source={imagem} style={styles.imagem}/>
-            <Gradiente width={largura} height={130/360*largura} style={styles.gradiente}/>
+            <Image source={imagem} style={styles.imagem} />
+            <Gradiente width={largura} height={130 / 360 * largura} style={styles.gradiente} />
             <Text style={styles.text}>{titulo}</Text>
             <TouchableOpacity style={styles.botaoVoltar}
-                              onPress={() => navigation.goBack()}>
-                <Voltar color={'#FFFFFF'} style={styles.voltar}/>
+                onPress={() => navigation.goBack()}>
+                <Voltar color={'#FFFFFF'} style={styles.voltar} />
             </TouchableOpacity>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    gradiente:{
+    gradiente: {
         position: 'absolute',
     },
     text: {
@@ -39,18 +39,18 @@ const styles = StyleSheet.create({
         alignContent: 'center',
         position: 'absolute',
         marginTop: 20,
-        width:'100%'
+        width: '100%'
     },
-    imagem:{
+    imagem: {
         width: '100%',
-        height: 180/360*largura,
+        height: 180 / 360 * largura,
     },
-    botaoVoltar:{
+    botaoVoltar: {
         marginTop: 20,
         marginLeft: 8,
         position: 'absolute',
     },
-    voltar:{
+    voltar: {
         width: 24,
         height: 24
     }

@@ -1,20 +1,18 @@
 import React from "react";
-import { Text, TouchableOpacity, View, Image, StyleSheet} from "react-native";
+import { Text, TouchableOpacity, View, Image, StyleSheet } from "react-native";
 
 import { TipoProdutor } from "../../../mocks/produtores";
 
 import Estrelas from "../../../components/Estrelas";
 
-export default ({produtor, onPress} : {produtor: TipoProdutor, onPress?:() => void}) => {
-    // console.log(produtor);
-    
-    return(
+export default ({ produtor, onPress }: { produtor: TipoProdutor, onPress?: () => void }) => {
+    return (
         <TouchableOpacity style={styles.cartao} onPress={onPress}>
-            <Image source={produtor.imagem} style={styles.imagem}/>
+            <Image source={produtor.imagem} style={styles.imagem} />
             <View style={styles.informacoes}>
                 <View>
                     <Text style={styles.nome}>{produtor.nome}</Text>
-                    <Estrelas quantidade={produtor.estrelas}/>
+                    <Estrelas quantidade={produtor.estrelas} />
                 </View>
                 <Text style={styles.distancia}>{produtor.distancia}m</Text>
             </View>
@@ -25,7 +23,7 @@ export default ({produtor, onPress} : {produtor: TipoProdutor, onPress?:() => vo
 
 const styles = StyleSheet.create({
 
-    cartao:{
+    cartao: {
         flexDirection: 'row',
         marginVertical: 8,
         marginHorizontal: 16,
@@ -33,9 +31,9 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         elevation: 4
     },
-    informacoes:{
+    informacoes: {
         flexDirection: 'row',
-        flex:1,
+        flex: 1,
         justifyContent: 'space-between',
         marginVertical: 16,
         marginRight: 16
@@ -47,15 +45,15 @@ const styles = StyleSheet.create({
         lineHeight: 22,
         marginBottom: 6
     },
-    distancia:{
+    distancia: {
         fontSize: 16,
         color: '#a3a3a3',
     },
-    imagem:{
+    imagem: {
         margin: 16,
         width: 48,
         height: 48,
         borderRadius: 10
-    } 
+    }
 
 })

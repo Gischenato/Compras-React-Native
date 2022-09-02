@@ -3,18 +3,18 @@ import { StyleSheet, View, Image, Text } from "react-native";
 import { TipoProdutor } from "../../../mocks/produtores";
 import Topo from "../../../components/Topo";
 
-const topoImg = require('../../../assets/topo.png') 
+const topoImg = require('../../../assets/topo.png')
 
-export default ({produtor, cesta}: {produtor:TipoProdutor, cesta:any}) => {
-    const {nome, descricao, preco} = cesta
+export default ({ produtor, cesta }: { produtor: TipoProdutor, cesta: any }) => {
+    const { nome, descricao, preco } = cesta
 
 
     return (<>
-        <Topo titulo="Detalhe da cesta" imagem={topoImg}/>
+        <Topo titulo="Detalhe da cesta" imagem={topoImg} />
         <View style={styles.view}>
             <Text style={styles.nome}>{nome}</Text>
             <View style={styles.restaurante}>
-                <Image style={styles.imagem} source={produtor.imagem}/>
+                <Image style={styles.imagem} source={produtor.imagem} />
                 <Text style={styles.nomeRestaurante}>{produtor.nome}</Text>
             </View>
             <Text style={styles.descricao}>{descricao}</Text>

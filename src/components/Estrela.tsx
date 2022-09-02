@@ -4,20 +4,20 @@ import { Image, StyleSheet, TouchableOpacity } from "react-native";
 const estrela = require('../assets/estrela.png')
 const estrelaCinza = require('../assets/estrelaCinza.png')
 
-export default ({verde, grande=false, onPress=()=>{}} : {verde:boolean, grande?:boolean, onPress?:() => void}) => {
+export default ({ verde, grande = false, onPress = () => { } }: { verde: boolean, grande?: boolean, onPress?: () => void }) => {
     const style = stylesFunc(grande)
 
-    return(
+    return (
         <TouchableOpacity onPress={onPress}>
-            <Image source={verde ? estrela : estrelaCinza} style={style.imagem}/>
+            <Image source={verde ? estrela : estrelaCinza} style={style.imagem} />
         </TouchableOpacity>
     )
 }
 
-const stylesFunc = (grande:boolean) => StyleSheet.create({
-    imagem:{
+const stylesFunc = (grande: boolean) => StyleSheet.create({
+    imagem: {
         width: grande ? 24 : 16,
         height: grande ? 24 : 16,
-        marginRight:2
+        marginRight: 2
     }
 })

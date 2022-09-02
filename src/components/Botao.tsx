@@ -2,10 +2,10 @@ import React from "react";
 
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
 
-export default ({texto, onPress}: {texto:string, onPress:() => void}) => {
-    
+export default ({ texto, onPress }: { texto: string, onPress: () => void }) => {
 
-    return(<>
+
+    return (<>
         <TouchableOpacity style={styles.botao} onPress={onPress}>
             <Text style={styles.texto}>{texto}</Text>
         </TouchableOpacity>

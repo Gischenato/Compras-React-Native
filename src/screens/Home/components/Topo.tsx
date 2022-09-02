@@ -6,7 +6,7 @@ import topo from "../../../mocks/topo"
 export default () => {
     return (
         <View style={styles.view}>
-            <Image source={topo.logo} style={styles.imagem}/>
+            <Image source={topo.logo} style={styles.imagem} />
             <Text style={styles.boasVindas}>{topo.boasVindas}</Text>
             <Text style={styles.legenda}>{topo.legenda}</Text>
         </View>

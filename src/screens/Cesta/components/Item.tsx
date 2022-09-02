@@ -5,9 +5,9 @@ import { TipoItem } from "../../../mocks/produtores";
 
 export default ({ item }: { item: TipoItem }) => {
     return (
-        <View style={styles.item}> 
+        <View style={styles.item}>
             <View style={styles.descricao}>
-                <Image style={styles.imagem} source={item.imagem}/>
+                <Image style={styles.imagem} source={item.imagem} />
                 <Text style={styles.nome}>{item.nome}</Text>
             </View>
         </View>
